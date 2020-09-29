@@ -1,3 +1,1 @@
-struct ActivityIndicator {
-    var text = "Hello, World!"
-}
+public typealias Default = Classic
