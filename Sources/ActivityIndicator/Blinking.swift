@@ -17,7 +17,7 @@ public struct Blinking: View {
     public let count: UInt
     public let size: CGFloat
 
-    public init(animate: Binding<Bool>, count: UInt = 8, size: CGFloat = 50) {
+    public init(animate: Binding<Bool>, count: UInt = 8, size: CGFloat = 16) {
         self._isAnimating = animate
         self.count = count
         self.size = size
@@ -31,6 +31,7 @@ public struct Blinking: View {
 
             }
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private func item(forIndex index: Int, in geometrySize: CGSize) -> some View {

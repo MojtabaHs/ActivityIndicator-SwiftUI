@@ -40,6 +40,7 @@ public struct Bars: View {
                 item(forIndex: index, in: geometry.size)
             }
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private var scale: CGFloat { CGFloat(isAnimating ? scaleRange.lowerBound : scaleRange.upperBound) }

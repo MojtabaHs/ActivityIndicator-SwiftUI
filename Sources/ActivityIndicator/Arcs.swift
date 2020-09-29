@@ -37,6 +37,7 @@ public struct Arcs: View {
                     )
             }
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private func item(forIndex index: Int, in geometrySize: CGSize) -> some View {

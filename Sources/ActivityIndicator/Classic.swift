@@ -36,6 +36,7 @@ public struct Classic: View {
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private func item(forIndex index: Int, in geometrySize: CGSize) -> some View {

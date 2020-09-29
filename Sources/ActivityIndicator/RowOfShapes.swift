@@ -54,6 +54,7 @@ public struct RowOfShapes: View {
                 item(forIndex: index, in: geometry.size)
             }
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private func size(count: UInt, geometry: CGSize) -> CGFloat {

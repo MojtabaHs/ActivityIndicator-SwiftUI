@@ -23,7 +23,7 @@ public struct RotatingShapes: View {
         self.content = AnyView(content())
     }
 
-    public init(animate: Binding<Bool>, count: UInt = 6, size: CGFloat = 20, spacing: CGFloat = 1) {
+    public init(animate: Binding<Bool>, count: UInt = 6, size: CGFloat = 8, spacing: CGFloat = 1) {
         self.init(animate: animate, count: count) {
             Circle().frame(width: size, height: size)
         }
@@ -44,6 +44,7 @@ public struct RotatingShapes: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
+        .aspectRatio(contentMode: .fit)
     }
 
     private func item(forIndex index: Int, in geometrySize: CGSize) -> some View {
