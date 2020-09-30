@@ -1,6 +1,11 @@
 # ActivityIndicator
 
-A description of this package.
+An Elegant And Customizable Pure SwiftUI Activity Indicators.
+
+[![Arcs][2]][2]
+[![Bards][3]][3]
+[![Blinkers][4]][4]
+
 
 # Demo
 
@@ -62,3 +67,10 @@ struct ContentView: View {
     }
 }
 ```
+
+
+
+  [1]: https://i.stack.imgur.com/0WfKz.png
+  [2]: https://i.stack.imgur.com/fdbbC.gif
+  [3]: https://i.stack.imgur.com/LrG7U.gif
+  [4]: https://i.stack.imgur.com/MvDUI.gif
