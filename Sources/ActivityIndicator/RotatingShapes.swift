@@ -17,13 +17,13 @@ public struct RotatingShapes: View {
     public let count: UInt
     public let content: AnyView
 
-    public init<Content: View>(animate: Binding<Bool>, count: UInt = 6, content: () -> Content) {
+    public init<Content: View>(animate: Binding<Bool>, count: UInt = 6, size: CGFloat = 8, content: () -> Content) {
         self._isAnimating = animate
         self.count = count
-        self.content = AnyView(content())
+        self.content = AnyView(content().frame(width: size, height: size))
     }
 
-    public init(animate: Binding<Bool>, count: UInt = 6, size: CGFloat = 8, spacing: CGFloat = 1) {
+    public init(animate: Binding<Bool>, count: UInt = 6, size: CGFloat = 8) {
         self.init(animate: animate, count: count) {
             Circle().frame(width: size, height: size)
         }
@@ -51,5 +51,11 @@ public struct RotatingShapes: View {
         content
             .scaleEffect(isAnimating ? animatingScale(forIndex: index) : 1 )
             .offset(y: geometrySize.width/10 - geometrySize.height/2)
+    }
+}
+
+extension RotatingShapes: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate, count: 6, size: 8)
     }
 }

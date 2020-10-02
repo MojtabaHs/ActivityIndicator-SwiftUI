@@ -53,8 +53,8 @@ public struct RowOfShapes: View {
             ForEach(0..<Int(count)) { index in
                 item(forIndex: index, in: geometry.size)
             }
+            .aspectRatio(contentMode: .fit)
         }
-        .aspectRatio(contentMode: .fit)
     }
 
     private func size(count: UInt, geometry: CGSize) -> CGFloat {
@@ -77,5 +77,15 @@ public struct RowOfShapes: View {
                     .delay(Double(index) / Double(count) / 2)
             )
             .offset(x: CGFloat(index) * (size(count: count, geometry: geometrySize) + spacing))
+    }
+}
+
+extension RowOfShapes: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate,
+                  count: 5,
+                  spacing: 8,
+                  scaleRange: (0.75...1),
+                  opacityRange: (0.25...1))
     }
 }

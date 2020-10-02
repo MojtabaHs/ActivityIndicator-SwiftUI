@@ -64,3 +64,14 @@ public struct Bars: View {
             .offset(x: CGFloat(index) * (size(count: count, geometry: geometrySize) + spacing))
     }
 }
+
+extension Bars: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate,
+                  count: 8,
+                  spacing: 8,
+                  cornerRadius: 8,
+                  scaleRange: (0.5...1),
+                  opacityRange: (0.25...1))
+    }
+}

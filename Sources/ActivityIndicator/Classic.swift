@@ -17,7 +17,7 @@ public struct Classic: View {
     public let count: UInt
     public let width: CGFloat
 
-    public init(animate: Binding<Bool>, count: UInt = 8, width: CGFloat = 0) {
+    public init(animate: Binding<Bool>, count: UInt = 8, width: CGFloat = -1) {
         self._isAnimating = animate
         self.count = count
         self.width = width
@@ -40,8 +40,8 @@ public struct Classic: View {
     }
 
     private func item(forIndex index: Int, in geometrySize: CGSize) -> some View {
-        let height: CGFloat = geometrySize.height / 3.2
-        let width: CGFloat = max(self.width, height/2)
+        let height: CGFloat = (geometrySize.height / 3.2).rounded()
+        let width: CGFloat = (self.width <= 0 ? height/2 : self.width).rounded()
         let angle = 2 * CGFloat.pi / CGFloat(count) * CGFloat(index)
         let x = (geometrySize.width/2 - height/2) * cos(angle)
         let y = (geometrySize.height/2 - height/2) * sin(angle)
@@ -53,3 +53,8 @@ public struct Classic: View {
     }
 }
 
+extension Classic: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate, count: 8, width: 0)
+    }
+}

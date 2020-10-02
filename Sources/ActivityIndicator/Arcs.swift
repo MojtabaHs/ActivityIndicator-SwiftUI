@@ -53,3 +53,9 @@ public struct Arcs: View {
         .frame(width: geometrySize.width, height: geometrySize.height)
     }
 }
+
+extension Arcs: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate, count: 3, width: 2, spacing: 1)
+    }
+}

@@ -51,3 +51,9 @@ public struct Blinking: View {
             .offset(x: x, y: y)
     }
 }
+
+extension Blinking: ActivityIndicatorStyle {
+    public init(animate: Binding<Bool>) {
+        self.init(animate: animate, count: 8, size: 16)
+    }
+}
