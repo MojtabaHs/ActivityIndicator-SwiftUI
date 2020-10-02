@@ -16,53 +16,46 @@ import SwiftUI
 import ActivityIndicator
 
 struct ContentView: View {
-
-    @State var start: Bool = true
-
     var body: some View {
         VStack(spacing: 24) {
+
             HStack(spacing: 24) {
-                Arcs(animate: $start)
-                Arcs(animate: $start, width: 8)
-                Arcs(animate: $start, count: 10)
+                ActivityIndicator(style: .arcs())
+                ActivityIndicator(style: .arcs(width: 8))
+                ActivityIndicator(style: .arcs(count: 10))
             }
 
             HStack(spacing: 24) {
-                Bars(animate: $start, opacityRange: 1...1)
-                Bars(animate: $start, scaleRange: 1...1)
-                Bars(animate: $start, count: 3)
+                ActivityIndicator(style: .bars(opacityRange: 1...1))
+                ActivityIndicator(style: .bars(scaleRange: 1...1))
+                ActivityIndicator(style: .bars(count: 3))
             }
 
             HStack(spacing: 24) {
-                Blinking(animate: $start)
-                Blinking(animate: $start, count: 4)
-                Blinking(animate: $start, count: 3, size: 30)
+                ActivityIndicator(style: .blinking())
+                ActivityIndicator(style: .blinking(count: 4))
+                ActivityIndicator(style: .blinking(count: 3, size: 50))
             }
 
             HStack(spacing: 24) {
-                Classic(animate: $start)
-                Classic(animate: $start)
-                Classic(animate: $start)
+                ActivityIndicator() // The Default
+                ActivityIndicator(style: .classic(count: 13, width: 2))
+                ActivityIndicator(style: .classic(count: 3, width: 50))
             }
 
             HStack(spacing: 24) {
-                RotatingShapes(animate: $start)
-                RotatingShapes(animate: $start)
-                RotatingShapes(animate: $start)
+                ActivityIndicator(style: .rotatingShapes())
+                ActivityIndicator(style: .rotatingShapes(count: 3, size: 30))
+                ActivityIndicator(style: .rotatingShapes(content: AnyView(Text("🎃").fixedSize())))
             }
 
-            HStack(spacing: 24) {
-                RowOfShapes(animate: $start, count: 3, opacityRange: 1...1)
-                RowOfShapes(animate: $start, count: 3, scaleRange: 1...1)
-                RowOfShapes(animate: $start, count: 3)
-            }
-
-            Button("toggle") {
-                start.toggle()
+            HStack(alignment: .center, spacing: 24) {
+                ActivityIndicator(style: .rowOfShapes())
+                ActivityIndicator(style: .rowOfShapes(count: 1, opacityRange: 0...1))
+                ActivityIndicator(style: .rowOfShapes(count: 3, scaleRange: 0.1...1))
             }
         }
         .padding()
-        .aspectRatio(contentMode: .fit)
         .foregroundColor(.red)
     }
 }
