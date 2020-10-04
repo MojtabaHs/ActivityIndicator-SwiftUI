@@ -26,9 +26,5 @@ let package = Package(
             name: "ActivityIndicator",
             dependencies: [],
             exclude: ["Demo"]),
-
-        .testTarget(
-            name: "ActivityIndicatorTests",
-            dependencies: ["ActivityIndicator"]),
     ]
 )
