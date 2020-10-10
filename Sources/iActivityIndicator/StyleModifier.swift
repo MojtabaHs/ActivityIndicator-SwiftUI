@@ -12,7 +12,7 @@
 
 import SwiftUI
 
-extension iActivityIndicator {
+public extension iActivityIndicator {
     func style(_ style: AStyle) -> Self {
         Self.init(style: style)
     }
