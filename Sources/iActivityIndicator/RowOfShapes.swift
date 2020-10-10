@@ -80,7 +80,7 @@ public struct RowOfShapes: View {
     }
 }
 
-extension RowOfShapes: ActivityIndicatorStyle {
+extension RowOfShapes: iActivityIndicatorStyle {
     public init(animate: Binding<Bool>) {
         self.init(animate: animate,
                   count: 5,

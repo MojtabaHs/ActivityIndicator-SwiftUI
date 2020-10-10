@@ -53,7 +53,7 @@ public struct Classic: View {
     }
 }
 
-extension Classic: ActivityIndicatorStyle {
+extension Classic: iActivityIndicatorStyle {
     public init(animate: Binding<Bool>) {
         self.init(animate: animate, count: 8, width: 0)
     }

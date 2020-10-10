@@ -2,11 +2,11 @@ import SwiftUI
 
 public typealias Default = Classic
 
-public protocol ActivityIndicatorStyle: View {
+public protocol iActivityIndicatorStyle: View {
     init(animate: Binding<Bool>)
 }
 
-public struct ActivityIndicator: View {
+public struct iActivityIndicator: View {
 
     @State var animate: Bool = false
     private let style: AStyle

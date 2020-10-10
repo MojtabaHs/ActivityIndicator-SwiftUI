@@ -52,7 +52,7 @@ public struct Blinking: View {
     }
 }
 
-extension Blinking: ActivityIndicatorStyle {
+extension Blinking: iActivityIndicatorStyle {
     public init(animate: Binding<Bool>) {
         self.init(animate: animate, count: 8, size: 16)
     }

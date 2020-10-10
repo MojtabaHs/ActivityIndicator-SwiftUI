@@ -65,7 +65,7 @@ public struct Bars: View {
     }
 }
 
-extension Bars: ActivityIndicatorStyle {
+extension Bars: iActivityIndicatorStyle {
     public init(animate: Binding<Bool>) {
         self.init(animate: animate,
                   count: 8,

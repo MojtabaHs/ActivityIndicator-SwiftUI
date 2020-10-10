@@ -54,7 +54,7 @@ public struct RotatingShapes: View {
     }
 }
 
-extension RotatingShapes: ActivityIndicatorStyle {
+extension RotatingShapes: iActivityIndicatorStyle {
     public init(animate: Binding<Bool>) {
         self.init(animate: animate, count: 6, size: 8)
     }
