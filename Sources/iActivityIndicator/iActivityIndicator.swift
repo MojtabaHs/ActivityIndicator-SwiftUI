@@ -10,9 +10,6 @@
 //  GitHub: https://github.com/MojtabaHs
 //
 
-public protocol iActivityIndicatorStyle: View {
-    init(animate: Binding<Bool>)
-}
 import SwiftUI
 
 public struct iActivityIndicator: View {
