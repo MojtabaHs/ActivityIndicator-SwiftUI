@@ -1,6 +1,6 @@
 //
 //  RowOfShapes.swift
-//  SwiftUIPlayground
+//  iActivityIndicator
 //
 //  Created by Seyed Mojtaba Hosseini Zeidabadi on 9/27/20.
 //  Copyright © 2020 Chenzook. All rights reserved.
