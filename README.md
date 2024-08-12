@@ -16,7 +16,7 @@ Code | Demo
 
 
   [1]: https://i.sstatic.net/kVFyr.gif
-  [2]: https://i.sstaticur.net/J9dvw.gif
+  [2]: https://i.sstatic.net/J9dvw.gif
   [3]: https://i.sstatic.net/zxoqs.gif
   [4]: https://i.sstatic.net/wFRVi.gif
   [5]: https://i.sstatic.net/2TwUG.gif
