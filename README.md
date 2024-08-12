@@ -15,17 +15,17 @@ Code | Demo
 
 
 
-  [1]: https://i.stack.imgur.com/kVFyr.gif
-  [2]: https://i.stack.imgur.com/J9dvw.gif
-  [3]: https://i.stack.imgur.com/zxoqs.gif
-  [4]: https://i.stack.imgur.com/wFRVi.gif
-  [5]: https://i.stack.imgur.com/2TwUG.gif
-  [6]: https://i.stack.imgur.com/gdaNb.png
-  [7]: https://i.stack.imgur.com/PRD5B.png
-  [8]: https://i.stack.imgur.com/DMFLk.png
-  [9]: https://i.stack.imgur.com/xalsy.png
-  [10]: https://i.stack.imgur.com/YHkfX.png
-  [11]: https://i.stack.imgur.com/XLPvH.png
+  [1]: https://i.sstatic.net/kVFyr.gif
+  [2]: https://i.sstaticur.net/J9dvw.gif
+  [3]: https://i.sstatic.net/zxoqs.gif
+  [4]: https://i.sstatic.net/wFRVi.gif
+  [5]: https://i.sstatic.net/2TwUG.gif
+  [6]: https://i.sstatic.net/gdaNb.png
+  [7]: https://i.sstatic.net/PRD5B.png
+  [8]: https://i.sstatic.net/DMFLk.png
+  [9]: https://i.sstatic.net/xalsy.png
+  [10]: https://i.sstatic.net/YHkfX.png
+  [11]: https://i.sstatic.net/XLPvH.png
   
   ---
 # The Demo Code
